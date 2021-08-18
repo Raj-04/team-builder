@@ -60,7 +60,7 @@ const Form = (props) => {
       )}
 
       <label>
-          Name:
+          Name :
           {empToEdit ? (
             <input
               type="text"
@@ -74,27 +74,44 @@ const Form = (props) => {
               name="name"
               onChange={changeHandler}
               value={employee.name}
+              placeholder="Type in a username"
+              maxLength="30"
             />
           )}
-        </label>
+        </label><br></br>
         <label>
-          Email:
+          Email :
           <input
             type="text"
             name="email"
             onChange={changeHandler}
             value={employee.email}
+            placeholder="Type in an email"
+            maxLength="50"
           />
-        </label>
-        <label>
-          Role:
-          <input
-            type="text"
-            name="role"
+        </label><br></br>
+        <label>Role :
+        <select onChange={changeHandler} name='role' value={employee.role} >
+            <option value=''>-- Select a Role --</option>
+            <option value='Executive'>Executive</option>
+            <option value='Manager'>Manager</option>
+            <option value='Operations and Production'>Operations and Production</option>
+            <option value='Project Manager'>Project Manager</option>
+            <option value='Sales Associate'>Sales Associate</option>
+            <option value='Marketing Manager'>Marketing Manager</option>
+            <option value='Receptionist'>Receptionist</option>
+          </select>
+        </label><br></br>
+        <label>Password : 
+            <input type="password" 
+            value={employee.password} 
             onChange={changeHandler}
-            value={employee.role}
-          />
-        </label>
+            placeholder="Password"
+            />
+        </label><br></br>
+        <label >
+
+        </label><br></br>
         <input
           type="submit"
           onSubmit={handleSubmit}

@@ -51,7 +51,7 @@ function App() {
     <div className="App">
       <Route exact path="/">
       <h1>
-          Important Company Employee Database
+          User Registration Database
         </h1>
         <Form
           handleAdd={handleAdd}
